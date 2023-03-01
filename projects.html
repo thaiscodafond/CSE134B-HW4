@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-container">
+        <a href="index.html" class="header-logo">TA</a>
+        <input type="checkbox" id="toggleMenu">
+        <nav class="header-nav">
+          <label class="navbar-toggle" for="toggleMenu">
+            <span class="burgerLayer"></span>
+            <span class="burgerLayer"></span>
+            <span class="burgerLayer"></span>
+          </label>
+          <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main id="projects">
+      <section id="proj1">
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="2"><h2 class="pourletel">Magnetic-powered train</h2></td>
+              <td class="invisible"><h2>Magnetic-powered train</h2></td>
+            </tr>
+            <tr>
+              <td>
+                <video class="sanshadow" autoplay muted controls>
+                  <source src="images/train.MP4" type="video/mp4" />
+                </video>
+              </td>
+              <td class="tabski">
+                <h3>Skills I used</h3>
+                <div class="skills">
+                  <ol>
+                    <li><span>X</span> C</li>
+                    <li><span>X</span> ARDUINO</li>
+                    <li><span>X</span> SIGNAL PROCESSING</li>
+                    <li><span>X</span> APPLIED PHYSICS</li>
+                  </ol>
+                </div>
+              </td>
+              <td>
+                <p>
+                  This was a magnetic propulsion train project made by myself
+                  and a classmate for the TIPE (French national exam to get into
+                  Engineering school). We built a small train, containing a
+                  magnet, passing through a coil. A current is sent through the
+                  coil when the train is placed, and a magnetic field is formed.
+                  This magnetic field creates potential energy. This propulses
+                  the train. However, if we kept the current running in the same
+                  direction, the train would get stuck in the middle of the
+                  coil. We thus built a bread board which is capable of
+                  analyzing the signal of the current and detecting when the
+                  train gets close enough, to then reverse the current.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="proj2">
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="2"><h2 class="pourletel">Facial Recognition Software</h2></td>
+              <td class="invisible"><h2>Facial Recognition Software</h2></td>
+            </tr>
+            <tr>
+              <td>
+                <img src="images/farec.png" />
+              </td>
+              <td class="tabski">
+                <h3>Skills I used</h3>
+                <div class="skills">
+                  <ol>
+                    <li><span>X</span> PYTHON</li>
+                    <li><span>X</span> DATA SCRAPPING</li>
+                    <li><span>X</span> MACHINE LEARNING</li>
+                  </ol>
+                </div>
+              </td>
+              <td>
+                <p>
+                  IMT Atlantique wanted to implement, in the program of the
+                  first year (1A), a new teaching unit dedicated to the Internet
+                  of Things and machine learning. For this, the school asked us
+                  to make a facial recognition software using an M5Stack AI
+                  camera, a second ESP-EYE DevKit camera and an M5Stack
+                  development kit. The work carried out made it possible to
+                  create a facial recognition algorithm using machine learning
+                  modules. It used computer knowledge such as the Sobel method
+                  and edge detection algorithms.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section id="proj3">
+        <table>
+          <tbody>
+            <tr>
+              <td colspan="2"><h2 class="pourletel">Website for beekeepers</h2></td>
+              <td class="invisible"><h2>Website for beekeepers</h2></td>
+            </tr>
+            <tr>
+              <td>
+                <img class="sanshadow" src="images/webbee2.png" />
+              </td>
+              <td class="tabski">
+                <h3>Skills I used</h3>
+                <div class="skills">
+                  <ol>
+                    <li><span>X</span> PHP</li>
+                    <li><span>X</span> SQL</li>
+                    <li><span>X</span> HTML</li>
+                    <li><span>X</span> CSS</li>
+                  </ol>
+                </div>
+              </td>
+              <td>
+                <p>
+                  Bee Friendly is a non-profit association that manages the Bee
+                  Friendly label, which labels products produced using
+                  bee-friendly practices. In order to facilitate contact between
+                  labeled farmers and verified beekeepers, the association
+                  wished to have a web interface. The interface would allow
+                  farmers to fill in the calendar of their interventions,
+                  beekeepers to ask farmers in their region for access to this
+                  calendar, and to fill in the location of their hives in the
+                  database. Me and my group's project consisted in developing
+                  this interface, as well as the back-end infrastructure
+                  allowing its proper functioning. A forum and a messaging
+                  system have also been implemented. I mostly focused on the CSS
+                  and the PHP for this project.
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <hr />
+
+    <footer>
+      <div id="topfooter">
+        <nav>
+          <ul id="Socials">
+            <li>
+              <a href=""
+                ><img
+                  src="images/linkedin-blue-logo-icon.png"
+                  alt="My Linkedin"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="images/github.png"
+                  alt="My Github"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p>last updated today</p>
+      <a href="contact.html" id="phonecontact">Contact me !</a>
+    </footer>
+  </body>
+</html>

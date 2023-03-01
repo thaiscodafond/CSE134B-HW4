@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <title>Blog Posts</title>
+  </head>
+  <body>
+    <header>
+      <section class="header-container">
+        <a href="index.html" class="header-logo">TA</a>
+        <input type="checkbox" id="toggleMenu">
+        <nav class="header-nav">
+          <label class="navbar-toggle" for="toggleMenu">
+            <span class="burgerLayer"></span>
+            <span class="burgerLayer"></span>
+            <span class="burgerLayer"></span>
+          </label>
+          <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="projects.html">projects</a></li>
+            <li><a href="contact.html">contact</a></li>
+          </ul>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <h1>Blog Posts</h1>
+      <button id="add-post-btn">Add post</button>
+      <section class="blogsection">
+        <ul id="post-list">
+          <!-- Blog posts-->
+        </ul>
+      </section>
+    </main>
+    
+    <footer>
+      <div id="topfooter">
+        <nav>
+          <ul id="Socials">
+            <li>
+              <a href=""
+                ><img
+                  src="images/linkedin-blue-logo-icon.png"
+                  alt="My Linkedin"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="images/github.png"
+                  alt="My Github"
+                  width="30"
+                  height="30"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <p>last updated today</p>
+      <a href="contact.html" id="phonecontact">Contact me !</a>
+    </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.1/dist/purify.min.js"></script>
+    <script type="module" src="blog.js"></script>
+  
+  
+  </body>
+</html>

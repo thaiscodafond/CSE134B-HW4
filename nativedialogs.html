@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Dialogs</title>
+  </head>
+  <body>
+    <h1>Native Dialogs Part 1</h1>
+    <button id="alert-btn">Alert</button>
+    <button id="confirm-btn">Confirm</button>
+    <button id="prompt-btn">Prompt</button>
+    <button id="safer-prompt-btn">Safer Prompt</button>
+    <br /><br />
+    <p id="confirm-output"></p>
+    <p id="prompt-output"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.1/dist/purify.min.js"></script>
+    <script>
+      // alert
+      const showAlert = () => {
+        window.alert("This is an alert dialog!");
+      };
+      // Function to show confirm dialog
+      const showConfirm = () => {
+        const result = window.confirm(
+          "Did you think my web portfolio looked cool ?"
+        );
+        document.getElementById(
+          "confirm-output"
+        ).textContent = `The value returned by the confirm method is: ${result}`;
+      };
+      
+      const showPrompt = () => {
+        const input = DOMPurify.sanitize(window.prompt(
+          "What's your favorite place to get coffee on campus ?"
+        ));
+        const message = DOMPurify.sanitize(input)
+          ? `It's : ${input}`
+          : "User didn't enter anything";
+        document.getElementById("prompt-output").textContent = message;
+      };
+      // On utilise le dom purify
+      const showSaferPrompt = () => {
+        const input = window.prompt(html`What coffee do you like ?`);
+        const message = DOMPurify.sanitize(input)
+          ? `Your favorite type of coffee is: ${DOMPurify.sanitize(input)}`
+          : "User didn't enter anything";
+        document.getElementById("prompt-output").textContent = message;
+      };
+      // on sanitanise
+      const html = (strings, ...values) => {
+        const dirty = strings.reduce((prev, next, i) => {
+          return `${prev}${next}${values[i] || ""}`;
+        }, "");
+        return DOMPurify.sanitize(dirty);
+      };
+
+      document.getElementById("alert-btn").addEventListener("click", showAlert);
+      document
+        .getElementById("confirm-btn")
+        .addEventListener("click", showConfirm);
+      document
+        .getElementById("prompt-btn")
+        .addEventListener("click", showPrompt);
+      document
+        .getElementById("safer-prompt-btn")
+        .addEventListener("click", showSaferPrompt);
+    </script>
+  </body>
+</html>

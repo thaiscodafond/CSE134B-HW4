@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Custom Dialogs</title>
+  </head>
+  <body>
+    <h1>Custom Dialogs</h1>
+    <button id="alert-btn">Alert</button>
+    <button id="confirm-btn">Confirm</button>
+    <button id="prompt-btn">Prompt</button>
+
+    <dialog id="alert">
+      <form method="dialog">
+        <menu>
+          <p>Wow ! Alert !</p>
+          <button id="close-dialog-alert" value="cancel">Cancel</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="confirm">
+      <form method="dialog">
+        <menu>
+          <p>Do you confirm ?</p>
+          <button id="closeDialogconf" value="cancel">Cancel</button>
+          <button id="confirmbtnbtn" value="confirmed">Confirm</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <dialog id="prompt">
+      <form method="dialog">
+        <p>
+          <label>
+            Name:
+            <input
+              type="nameI"
+              name="nameI"
+              id="nameI"
+              placeholder="Enter your name"
+              required
+            />
+          </label>
+        </p>
+        <menu>
+          <button id="closeDialog" value="cancel">Cancel</button>
+          <button id="confirmBtn" value="default">Confirm</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <br /><br />
+    <p id="confirm-output"></p>
+    <p id="prompt-output"></p>
+
+    <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.1/dist/purify.min.js"></script>
+    <script type="module" src="customdialog.js"></script>
+  </body>
+</html>
