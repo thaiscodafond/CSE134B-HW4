@@ -112,16 +112,16 @@
     cursor: pointer;
   }
   
-  input {
+  #toggleMenu {
     display: none;
   }
   
-  input:checked ~ nav .nav-links {
+  input#toggleMenu:checked ~ nav .nav-links {
     transform: translateY(0);
     z-index: 0;
   }
   
-  input:checked ~ nav .navbar-toggle {
+  input#toggleMenu:checked ~ nav .navbar-toggle {
     margin-top: 35px;
   }
   
@@ -707,16 +707,16 @@
     cursor: pointer;
   }
   
-  input {
+  input#toggleMenu{
     display: none;
   }
   
-  input:checked ~ nav .nav-links {
+  input#toggleMenu:checked ~ nav .nav-links {
     transform: translateY(0);
     z-index: 0;
   }
   
-  input:checked ~ nav .navbar-toggle {
+  input#toggleMenu:checked ~ nav .navbar-toggle {
     margin-top: 35px;
   }
   
@@ -1367,12 +1367,12 @@
     color: var(--main-color);
   }
 
-  input:checked ~ nav .nav-links {
+  input#toggleMenu:checked ~ nav .nav-links {
     transform: translateY(0);
     z-index: 0;
   }
   
-  input:checked ~ nav .navbar-toggle {
+  input#toggleMenu:checked ~ nav .navbar-toggle {
     margin-top: 35px;
   }
   nav .navbar-toggle {
@@ -1382,7 +1382,7 @@
     cursor: pointer;
   }
   
-  input {
+  input#toggleMenu {
     display: none;
   }
   nav .navbar-toggle .burgerLayer {
@@ -1421,7 +1421,7 @@
     color: rgb(255, 255, 255);
   }
 
-  input:checked ~ nav .nav-links li a {
+  input#toggleMenu:checked ~ nav .nav-links li a {
     color: rgb(0, 0, 0);
   }
 
