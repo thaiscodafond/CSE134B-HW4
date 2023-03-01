@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/main.css" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-WP8Y026WHC"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-WP8Y026WHC");
+    </script>
     <title>Blog Posts</title>
   </head>
   <body>
     <header>
       <section class="header-container">
         <a href="index.html" class="header-logo">TA</a>
-        <input type="checkbox" id="toggleMenu">
+        <input type="checkbox" id="toggleMenu" />
         <nav class="header-nav">
           <label class="navbar-toggle" for="toggleMenu">
             <span class="burgerLayer"></span>
@@ -36,7 +50,7 @@
         </ul>
       </section>
     </main>
-    
+
     <footer>
       <div id="topfooter">
         <nav>
@@ -65,10 +79,8 @@
       <p>last updated today</p>
       <a href="contact.html" id="phonecontact">Contact me !</a>
     </footer>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/dompurify@2.3.1/dist/purify.min.js"></script>
     <script type="module" src="blog.js"></script>
-  
-  
   </body>
 </html>
