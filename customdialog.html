@@ -1,6 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Custom Dialogs</title>
   </head>
   <body>
@@ -11,20 +14,16 @@
 
     <dialog id="alert">
       <form method="dialog">
-        <menu>
-          <p>Wow ! Alert !</p>
+        <p>Wow ! Alert !</p>
           <button id="close-dialog-alert" value="cancel">Cancel</button>
-        </menu>
       </form>
     </dialog>
 
     <dialog id="confirm">
       <form method="dialog">
-        <menu>
-          <p>Do you confirm ?</p>
+        <p>Do you confirm ?</p>
           <button id="closeDialogconf" value="cancel">Cancel</button>
-          <button id="confirmbtnbtn" value="confirmed">Confirm</button>
-        </menu>
+          <button id="confirmtrue" value="confirmed">Confirm</button>
       </form>
     </dialog>
 
@@ -34,18 +33,16 @@
           <label>
             Name:
             <input
-              type="nameI"
-              name="nameI"
-              id="nameI"
+              type="text"
+              name="nameInfo"
+              id="nameInfo"
               placeholder="Enter your name"
               required
             />
           </label>
         </p>
-        <menu>
           <button id="closeDialog" value="cancel">Cancel</button>
           <button id="confirmBtn" value="default">Confirm</button>
-        </menu>
       </form>
     </dialog>
 

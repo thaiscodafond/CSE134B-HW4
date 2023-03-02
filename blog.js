@@ -1,4 +1,3 @@
-import { createPostHTML } from "./postHTML.js"; //Bind with HTML
 import { loadPosts, savePosts } from "./data.js"; //Store into local storage
 import { renderPosts } from "./render.js"; //Render the post after binding and stocking
 

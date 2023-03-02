@@ -7,15 +7,13 @@ var confirmBtn = document.getElementById("confirmBtn");
 var closeDialog = document.getElementById("closeDialog");
 
 openNDialog.addEventListener("click", function onOpen() {
-  if (typeof promptDialog.showModal === "function") {
-    promptDialog.showModal();
-  }
+  promptDialog.showModal();
 });
 
 promptDialog.addEventListener("close", function () {
-  let name = DOMPurify.sanitize(document.getElementById("nameI").value);
+  let name = DOMPurify.sanitize(document.getElementById("nameInfo").value);
   const message = DOMPurify.sanitize(name)
-          ? `It's : ${name}`
+          ? `Your name is : ${name} !`
           : "User didn't enter anything";
         document.getElementById("prompt-output").textContent = message;
   }
@@ -32,13 +30,11 @@ promptDialog.addEventListener("click", (event) => {
 //Confirm part
 var openCDialog = document.getElementById("confirm-btn");
 var confirmDialog = document.getElementById("confirm");
-var submitButton = document.getElementById("confirmbtnbtn");
+var submitButton = document.getElementById("confirmtrue");
 var cancelButton = document.getElementById("closeDialogconf");
 
 openCDialog.addEventListener("click", function onOpen() {
-  if (typeof confirmDialog.showModal === "function") {
-    confirmDialog.showModal();
-  }
+  confirmDialog.showModal();
 });
 
 submitButton.addEventListener("click", () => {
@@ -57,9 +53,7 @@ var alertDialog = document.getElementById("alert");
 var closeButton = document.getElementById("close-dialog-alert");
 
 openADialog.addEventListener("click", function onOpen() {
-  if (typeof alertDialog.showModal === "function") {
     alertDialog.showModal();
-  }
 });
 
 closeButton.addEventListener("click", function () {

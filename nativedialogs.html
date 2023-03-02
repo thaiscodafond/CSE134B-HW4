@@ -31,11 +31,11 @@
           "confirm-output"
         ).textContent = `The value returned by the confirm method is: ${result}`;
       };
-      
+
       const showPrompt = () => {
-        const input = DOMPurify.sanitize(window.prompt(
-          "What's your favorite place to get coffee on campus ?"
-        ));
+        const input = DOMPurify.sanitize(
+          window.prompt("What's your favorite place to get coffee on campus ?")
+        );
         const message = DOMPurify.sanitize(input)
           ? `It's : ${input}`
           : "User didn't enter anything";
@@ -57,16 +57,32 @@
         return DOMPurify.sanitize(dirty);
       };
 
-      document.getElementById("alert-btn").addEventListener("click", showAlert);
+      const waitAlert = () => {
+        setTimeout(() => showAlert(), 300);
+      };
+
+      const waitConfirm = () => {
+        setTimeout(() => showConfirm(), 300);
+      };
+
+      const waitPrompt = () => {
+        setTimeout(() => showPrompt(), 300);
+      };
+
+      const waitSaferPrompt = () => {
+        setTimeout(() => showSaferPrompt(), 300);
+      };
+
+      document.getElementById("alert-btn").addEventListener("click", waitAlert);
       document
         .getElementById("confirm-btn")
-        .addEventListener("click", showConfirm);
+        .addEventListener("click", waitConfirm);
       document
         .getElementById("prompt-btn")
-        .addEventListener("click", showPrompt);
+        .addEventListener("click", waitPrompt);
       document
         .getElementById("safer-prompt-btn")
-        .addEventListener("click", showSaferPrompt);
+        .addEventListener("click", waitSaferPrompt);
     </script>
   </body>
 </html>
