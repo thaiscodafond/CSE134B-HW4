@@ -1,3 +1,5 @@
+//Prompt part
+
 var openNDialog = document.getElementById("prompt-btn");
 var promptDialog = document.getElementById("prompt");
 var outputDialog = document.querySelector("#prompt-output");
@@ -27,6 +29,7 @@ promptDialog.addEventListener("click", (event) => {
   const rect = promptDialog.getBoundingClientRect();
 });
 
+//Confirm part
 var openCDialog = document.getElementById("confirm-btn");
 var confirmDialog = document.getElementById("confirm");
 var submitButton = document.getElementById("confirmbtnbtn");
@@ -48,6 +51,7 @@ cancelButton.addEventListener("click", function () {
   confirmDialog.close();
 });
 
+//Alert part
 var openADialog = document.getElementById("alert-btn");
 var alertDialog = document.getElementById("alert");
 var closeButton = document.getElementById("close-dialog-alert");

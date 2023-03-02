@@ -1,44 +1,44 @@
-import { createPostHTML } from "./postHTML.js";
-import { loadPosts, savePosts } from "./data.js";
-import { renderPosts } from "./render.js";
+import { createPostHTML } from "./postHTML.js"; //Bind with HTML
+import { loadPosts, savePosts } from "./data.js"; //Store into local storage
+import { renderPosts } from "./render.js"; //Render the post after binding and stocking
 
 const postList = document.getElementById("post-list");
 const addPostForm = document.getElementById("add-post-form");
 
 let posts = loadPosts();
 
-if (posts.length === 0 && !localStorage.getItem("examplePostsLoaded")) {
-  posts = [
+if (posts.length === 0 && !localStorage.getItem("examplePostsLoaded")) { //Initial posts with if (to know if we already opened up the page)
+  posts = [                                                              //So that it stays the same when it refreshes
     {
-      title: "10 Tips for Learning a New Language",
-      date: "2022-02-15",
+      title: "Just arrived in America",
+      date: "2022-01-01",
       summary:
-        "Learning a new language can be challenging, but with these 10 tips, you'll be well on your way to becoming fluent!",
+        "Wow can't believe I'm staying two quarters at UCSD ! I hope I become fluent in english. Well I'm supposed to already be fluent but..",
     },
     {
-      title: "The Benefits of Yoga",
-      date: "2022-01-25",
+      title: "Sunny San Diego",
+      date: "2022-01-07",
       summary:
-        "Yoga is more than just exercise - it has many physical and mental benefits that can improve your overall health and well-being.",
+        "It never stops raining. I don't know why it's called Sunny San Diego.",
     },
     {
-      title: "How to Start a Blog",
+      title: "French sadness",
       date: "2022-02-01",
       summary:
-        "Blogging can be a fun and rewarding way to share your thoughts and ideas with the world. Here's how to get started!",
+        "I miss french pastries. I have not tasted a great croissant in weeks. Also I need some cheese and wine.",
     },
     {
-      title: "5 Easy Recipes for Beginner Cooks",
-      date: "2022-02-10",
+      title: "Trip to LA",
+      date: "2022-02-18",
       summary:
-        "If you're new to cooking, these 5 easy recipes are perfect for getting started in the kitchen. You'll be a pro in no time!",
+        "I spent two days in LA. My favorite part was the Getty Museum because it was beautiful and FREE !",
     },
   ];
-  localStorage.setItem("examplePostsLoaded", "true");
+  localStorage.setItem("examplePostsLoaded", "true");  //If statement
   savePosts(posts);
 }
 
-const addPostBtn = document.getElementById("add-post-btn");
+const addPostBtn = document.getElementById("add-post-btn"); //Add a post and sanitize them
 addPostBtn.addEventListener("click", function () {
   const title = DOMPurify.sanitize(prompt("Enter the title of your post:"));
   const date = DOMPurify.sanitize(prompt("Enter the date of your post:"));
@@ -49,7 +49,7 @@ addPostBtn.addEventListener("click", function () {
   savePosts(posts);
 });
 
-postList.addEventListener("click", function (event) {
+postList.addEventListener("click", function (event) { //Let's edit
   if (event.target.classList.contains("edit-btn")) {
     const index = event.target.dataset.index;
     const post = posts[index];
